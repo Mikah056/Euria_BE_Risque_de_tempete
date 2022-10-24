@@ -1,6 +1,8 @@
 ###########  Traitement de la base  ###########
 
 
+
+
 #importation des 73 bases data-events-Details
 Alldata=list(73)
 for(i in 1950:1971){
@@ -28,7 +30,7 @@ for (i in 1950:2022) {
   Alldata1[[i]]=Alldata[[i]][,-c(3,6,7,10,14,15,16,17,18,19,20,27,28,29,30,31,35,36,37,38,49,50,51)]
 }
 
-#Suppression des lignes des évenements autres que les tornades
+#Suppression des lignes des ï¿½venements autres que les tornades
 Alldata2=NULL
 for (i in 1950:2022) {
   Alldata2[[i]]=Alldata1[[i]][-which(Alldata1[[i]]$EVENT_TYPE!='Tornado'),]
