@@ -1,7 +1,13 @@
 ###########  Traitement de la base  ###########
 
 
+<<<<<<< HEAD
 ######################importation des 73 bases data-events-Details
+=======
+
+
+#importation des 73 bases data-events-Details
+>>>>>>> 097f81306eec8222e372e4ecc40a39d34425dc19
 Alldata=list(73)
 for(i in 1950:1971){
   Alldata[[i]]=read.csv(paste0("C:/Hakim/D1/Euria/M1/BE/Data/Storm Events _ Details/StormEvents_details-ftp_v1.0_d",i,"_c20210803.csv"),header=T)
@@ -28,7 +34,7 @@ for (i in 1950:2022) {
   Alldata1[[i]]=Alldata[[i]][,-c(3,6,7,10,14,15,16,17,18,19,20,27,28,29,30,31,35,36,37,38,49,50,51)]
 }
 
-#Suppression des lignes des évenements autres que les tornades
+#Suppression des lignes des ï¿½venements autres que les tornades
 Alldata2=NULL
 for (i in 1950:2022) {
   Alldata2[[i]]=Alldata1[[i]][-which(Alldata1[[i]]$EVENT_TYPE!='Tornado'),]
